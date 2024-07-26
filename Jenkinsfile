@@ -5,7 +5,7 @@ pipeline {
           
           environment {
               // def img = ("${env.JOB_NAME}:${env.BUILD_ID}").toLowerCase()
-              def registry = "gvenkat/flaskapp"
+              def registry = "gonesai4/flaskapp"
               def img = "${registry}" + ":${env.BUILD_ID}"
           }
 
@@ -13,7 +13,7 @@ pipeline {
             stage('Checkout Code') {
                         steps {
                             echo 'Checkout Code'
-                            git 'https://github.com/venkat09docs/FlaskApp.git'
+                            git 'https://github.com/gonesai4/FlaskApp.git'
                             sh 'ls -l'
                         }              
             }
